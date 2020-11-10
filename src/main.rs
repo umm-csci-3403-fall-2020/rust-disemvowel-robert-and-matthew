@@ -15,12 +15,16 @@ fn main() {
     // be the file we want to write the disemvoweled text to.
     let args: Vec<String> = env::args().collect();
 
+    if args.len() < 2 { //panics if there arent two arguments
+       panic!("Not enough arguments");
+    }
+
     let input = &args[1];
     let output = &args[2];
 
-    if output == "" { //panics if there arent two arguments
-       panic!("Not enough arguments");
-    }
+    let inputfile = Path::new(input);
+
+    let inputstring = read_file(inputfile);
     
     //TODO: Panic if not enough arguments are provided
     //Panic should output the string "Not enough arguments"

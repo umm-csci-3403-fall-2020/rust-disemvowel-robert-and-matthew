@@ -25,9 +25,8 @@ fn main() {
     let inputfile = Path::new(input);
 
     let inputstring = read_file(inputfile);
-    
-    //TODO: Panic if not enough arguments are provided
-    //Panic should output the string "Not enough arguments"
+
+    let outputfile = Path::new(output);
 
     //TODO: 
     //  * Pass an argument to read_file to read the original text
